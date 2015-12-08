@@ -1,9 +1,11 @@
-#include "common/dummy.h"
+#include "../common/mainwindow.h"
+#include <QApplication>
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
 
-    // Create a dummy object
-    DummyClass a;
-
-    return 0;
+    return a.exec();
 }
